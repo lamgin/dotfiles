@@ -3,10 +3,11 @@ local action    = wezterm.action
 local nerdfonts = wezterm.nerdfonts
 local mux       = wezterm.mux
 
+local config   = {}
+
 local F = require("functions")
 
 local colors   = {}
-local config   = {}
 local custom   = {}
 local projects = {}
 
@@ -18,7 +19,7 @@ custom = {
   },
   hostname = {
     current = string.lower(wezterm.hostname()),
-    work = "pc-xxxxxx",
+    work = "working",
   },
   timeout = {
     key = 3000,
@@ -29,12 +30,7 @@ custom = {
 
 projects = {
   default_workspace = "default",
-  repositories      = {
-    { type = "personal", workspace = "default",  name = "home",     path = os.getenv("HOME")                                                                     },
-    { type = "personal", workspace = "dotfiles", name = "project",  path = os.getenv("HOME") .. "/Repositories/personal/gitlab.com/user/dotfiles"                },
-    { type = "work",     workspace = "project1", name = "template", path = os.getenv("HOME") .. "/Repositories/work/github.com/user/project1"                    },
-    { type = "work",     workspace = "project2", name = "tab1",     path = os.getenv("HOME") .. "/Repositories/work/gitlab.com/group", tabs = { 'tab1', 'tab2' } },
-  }
+  repositories      = {}
 }
 
 -- Path
@@ -76,6 +72,8 @@ config.use_ime = false
 -- Keys Mapping
 config.disable_default_key_bindings = true
 config.leader = { key = "f", mods = "CTRL", timeout_milliseconds = custom.timeout.leader }
+
+
 config.keys = {
   { key = "o", mods = "LEADER",
       action = action.ActivateKeyTable {
