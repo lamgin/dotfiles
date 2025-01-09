@@ -13,59 +13,7 @@ success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set
 disabled = false
 
 [conda]
-format = '[$symbol$environment](dimmed yellow) '
 ignore_base = false
 
 [kubernetes]
 disabled = false
-
-[dart]
-format = "[$symbol]($style)"
-
-[erlang]
-format = '[$symbol]($style)'
-
-[golang]
-format = '[$symbol]($style)'
-
-[gradle]
-format = '[$symbol]($style)'
-
-[helm]
-format = '[$symbol]($style)'
-
-[java]
-format = '[$symbol]($style)'
-
-[julia]
-format = '[$symbol]($style)'
-
-[kotlin]
-format = '[$symbol]($style)'
-
-[lua]
-format = '[$symbol]($style)'
-
-[nodejs]
-format = '[$symbol]($style)'
-
-[perl]
-format = '[$symbol]($style)'
-
-[php]
-format = '[$symbol]($style)'
-
-[python]
-format = '[$symbol]($style)'
-
-[ruby]
-format = '[$symbol]($style)'
-
-[rust]
-format = '[$symbol]($style)'
-
-[swift]
-format = '[$symbol]($style)'
-
-[vagrant]
-format = '[$symbol]($style)'
